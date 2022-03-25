@@ -76,7 +76,7 @@ class DSN(Tk):
                 if window._data_stop_event and not window._data_stop_event.is_set():
                     if window.type == 'Spy':
                         window.stopData()
-                        time.sleep(5)
+                        time.sleep(8)
                     else:
                         window._data_stop_event.set()
                 window.destroy()
