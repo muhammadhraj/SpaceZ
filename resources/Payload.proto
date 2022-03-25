@@ -1,0 +1,74 @@
+syntax = "proto3";
+
+service PayLoadService {
+  rpc Deploy(DeployRequest) returns (DeployResponse);
+  rpc StartSciData(PayloadRequest) returns (stream StartSciDataResponse);
+  rpc StartCommsData(PayloadRequest) returns (stream StartCommsDataResponse);
+  rpc StartSpyData(PayloadRequest) returns (stream StartSpyDataResponse);
+  rpc StopData(PayloadRequest) returns (StopDataResponse);
+  rpc Decommission(PayloadRequest) returns (DecommissionResponse);
+  rpc PayloadStartTelemetry(PayloadRequest) returns (stream PayloadStartTelemetryResponse);
+  rpc PayloadStopTelemetry(PayloadRequest) returns (PayloadStopTelemetryResponse);
+}
+
+message DeployRequest {
+  optional int32 altitude = 1;
+  optional float longitude = 2;
+  optional float latitude = 3;
+  optional int32 temperature = 4;
+  optional int32 orbit = 5;
+}
+
+message DeployResponse {
+  int32 responseCode = 1;
+  string responseMessage = 2;
+}
+
+message PayloadRequest {
+  string vehicleName = 1;
+}
+
+message StartSciDataResponse {
+  int32 responseCode = 1;
+  string responseMessage = 2;
+  optional int32 rainfall = 3;
+  optional int32 humidity = 4;
+  optional int32 snow = 5;
+}
+
+message StartCommsDataResponse {
+  int32 responseCode = 1;
+  string responseMessage = 2;
+  optional int32 downloadSpeed = 3;
+  optional int32 uploadSpeed = 4;
+}
+
+message StartSpyDataResponse {
+  int32 responseCode = 1;
+  string responseMessage = 2;
+  bytes image = 3;
+}
+
+message StopDataResponse {
+  int32 responseCode = 1;
+  string responseMessage = 2;
+}
+
+message DecommissionResponse {
+  int32 responseCode = 1;
+  string responseMessage = 2;
+}
+
+message PayloadStartTelemetryResponse {
+  int32 responseCode = 1;
+  string responseMessage = 2;
+  optional int32 altitude = 3;
+  optional float longitude = 4;
+  optional float latitude = 5;
+  optional int32 temperature = 6;
+}
+
+message PayloadStopTelemetryResponse {
+  int32 responseCode = 1;
+  string responseMessage = 2;
+}

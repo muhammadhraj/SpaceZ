@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Falcon 9",
+    "orbit": 600,
+    "payload": {
+      "name": "CloudSAT",
+      "type": "Scientific"
+    }
+  },
+  {
+    "name": "Falcon 9 Full Thrust",
+    "orbit": 1200,
+    "payload": {
+      "name": "METEOSAT",
+      "type": "Scientific"
+    }
+  },
+  {
+    "name": "Starship",
+    "orbit": 900,
+    "payload": {
+      "name": "CommSAT",
+      "type": "Communication"
+    }
+  },
+  {
+    "name": "Falcon Z",
+    "orbit": 1500,
+    "payload": {
+      "name": "zSAT",
+      "type": "Communication"
+    }
+  },
+  {
+    "name": "Falcon X",
+    "orbit": 1200,
+    "payload": {
+      "name": "GeoEye",
+      "type": "Spy"
+    }
+  }
+]

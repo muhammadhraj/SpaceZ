@@ -1,0 +1,46 @@
+syntax = "proto3";
+
+service LaunchVehicleService {
+  rpc VehicleLaunch(VehicleRequest) returns (stream VehicleLaunchResponse);
+  rpc DeployPayload(VehicleRequest) returns (DeployPayloadResponse);
+  rpc Deorbit(VehicleRequest) returns (DeorbitResponse);
+  rpc VehicleStartTelemetry(VehicleRequest) returns (stream VehicleStartTelemetryResponse);
+  rpc VehicleStopTelemetry(VehicleRequest) returns (VehicleStopTelemetryResponse);
+}
+
+message VehicleRequest {
+  string vehicleName = 1;
+}
+
+message VehicleLaunchResponse {
+  int32 responseCode = 1;
+  string responseMessage = 2;
+  optional int32 timeToOrbit = 3;
+}
+
+message DeployPayloadResponse {
+  int32 responseCode = 1;
+  string responseMessage = 2;
+}
+
+message DeorbitResponse {
+  int32 responseCode = 1;
+  string responseMessage = 2;
+}
+
+message VehicleStartTelemetryResponse {
+  int32 responseCode = 1;
+  string responseMessage = 2;
+  optional int32 altitude = 3;
+  optional float longitude = 4;
+  optional float latitude = 5;
+  optional float temperature = 6;
+  optional int32 timeToOrbit = 7;
+  bool transmitTelemetry = 8;
+}
+
+message VehicleStopTelemetryResponse {
+  int32 responseCode = 1;
+  string responseMessage = 2;
+}
+
