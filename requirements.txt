@@ -1,0 +1,7 @@
+altgraph==0.17.2
+grpcio==1.44.0
+grpcio-tools==1.44.0
+macholib==1.16
+Pillow==9.0.1
+protobuf==3.19.4
+six==1.16.0
