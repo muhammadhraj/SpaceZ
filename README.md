@@ -16,7 +16,7 @@ mkdir new_directory
 
 cd new_directory
 
-4. Once in this directory, you can clone this repository into your directory with command:
+4. Once in this directory, you can clone this repository into your directory with command. Alternatively, if you have a zip file of the repository, you can unzip the file and move/copy the unzipped contents to the directory you just created:
 
 git clone https://github.com/muhammadhraj/SpaceZ.git
 
