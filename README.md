@@ -1,6 +1,8 @@
 # SpaceZ
 Using the gRPC framework, SpaceZ Deep Space Network allows you to launch multiple vehicles into space, deploy their payloads into orbit, and receive data from them.
 
+![](resources/demo.png)
+
 # Instructions
 1. This program was written using Python 3.10.3 and it is therefore recommended to use this when running the program. To install, go to the link below.
 
